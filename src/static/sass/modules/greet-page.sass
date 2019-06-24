@@ -1,0 +1,33 @@
+@import 'navigation-top'
+  
+.greet-page
+  background-color: $blue-moderate
+  position: relative
+  font-size: 1rem
+  &__move-down
+    display: inline-block
+    margin: 0 0 2.62vw 50%
+    transform: translateX(-50%)
+  &-content
+    max-width: 983px
+    margin: 12.59vw auto
+    color: $white
+    text-align: center
+    &__subtitle
+      font-size: 3.6em
+      margin-top: 6.2rem
+    &__button
+      margin-top: 2.7rem
+      border: 1px solid $white
+      &::after
+        background-color: $blue-moderate
+      &::before
+        background-color: $blue-moderate
+      &:hover
+        color: $blue-moderate
+        background-color: $white
+        border: 1px solid $blue-moderate
+
++respond(tablet)
+  .greet-page
+    font-size: 0.5rem

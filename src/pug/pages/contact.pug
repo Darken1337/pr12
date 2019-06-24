@@ -1,0 +1,97 @@
+extends ../layout/main
+
+block variables
+  -var title = 'Contact'
+  -var fileName = 'contact'
+  -var build = true
+  -var logoTop = 'logo'
+  -var navTopColor = 'white'
+  -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+  include ../modules/greet-page
+
+  +greet-page('Contact', 'Let’s talk about your next project', false, 'white')
+
+  section#s-in-touch
+    .container
+      .in-touch
+        .in-touch__content
+          .in-touch__name TRANMAUTRITAM
+          h2.in-touch__title Art Director at Cesis WordPress
+          .in-touch__subtitle I build identities and experiences to elevate 	&#38; empower organizations.
+          .in-touch__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat 
+        form.in-touch-form
+          .input
+            input(type="text" placeholder="Your name")
+            img.input__icon(src="", data="static/img/icons/icon-1.png", alt="")
+          .input 
+            input(type="email" placeholder="Email")
+            img.input__icon(src="", data="static/img/icons/icon-2.png", alt="")
+          .input
+            input(type="tel" placeholder="Phone")
+            img.input__icon(src="", data="static/img/icons/icon-3.png", alt="")
+          .input
+            input(type="text" placeholder="Envato Market")
+            img.input__icon(src="", data="static/img/icons/icon-4.png", alt="")
+          .input#trueSelectWrapper
+            select#trueSelect.select(name="looking_for")
+              option.select__item(value="option1" data-val) option1
+              option.select__item(value="option2" data-val) option2
+              option.select__item(value="option3" data-val) option3
+              option.select__item(value="option4" data-val) option4
+              option.select__item(value="option4" data-val) option5
+              option.select__item(value="option5" data-val) option6
+            img.input__icon#trueSelectIcon(src="", data="static/img/icons/icon-5.png", alt="")
+          .input#trueSelectBudgetWrapper
+            select(name="your_budget")#trueSelectBudget.select
+              option.select__item(value="optionX" data-val) optionX
+              option.select__item(value="optionY" data-val) optionY
+              option.select__item(value="optionZ" data-val) optionZ
+              option.select__item(value="optionH" data-val) optionH
+              option.select__item(value="optionO" data-val) optionO
+              option.select__item(value="optionP" data-val) optionP
+            img.input__icon#budgetSelectIcon(src="", data="static/img/icons/icon-5.png", alt="")
+          button(type="submit").button-black-border.in-touch-form__button keep in touch
+  section#s-contacts
+    .container
+      .contacts.js-contacts
+        .contact
+          .contact__name Postal Address
+          ul.contact__list
+            li.contact__item: a(href="#").contact__link PO Box 16122 Collins Street West 
+            li.contact__item: a(href="#").contact__link Victoria 8007 Australia
+        .contact
+          .contact__name Envato HQ
+          ul.contact__list
+            li.contact__item: a(href="#").contact__link 121 King Street, Melbourne 
+             li.contact__item: a(href="#").contact__link Victoria 3000 Australia - Map
+        .contact
+          .contact__name Business Phone
+          ul.contact__list
+            li.contact__item: a(href="#").contact__link +61 3 8376 6284
+            li.contact__item: a(href="#").contact__link +44 3 7890 - 123
+  section#s-google-maps
+  section#s-socials
+    .socials
+      .socials__item
+        i.fab.fa-facebook-f
+        .socials__description Follow us on Facebook
+      .socials__item
+        i.fab.fa-twitter
+        .socials__description Follow us on Twitter
+      .socials__item
+        i.fab.fa-behance
+        .socials__description Follow us on Behance
+      .socials__item
+        i.fab.fa-dribbble
+        .socials__description Follow us on Dribble
+      .socials__item
+        i.fab.fa-google-plus-g
+        .socials__description Follow us on Google Plus
+      .socials__item
+        i.fab.fa-wordpress
+        .socials__description Follow us on WordPress
+  include ../blocks/_footer      
+
+  

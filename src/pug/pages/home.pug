@@ -1,0 +1,92 @@
+extends ../layout/main
+
+block variables
+	-var title = "Cesis"
+	-var fileName = 'home'
+	-var build = true
+	-var logoTop = 'logo'
+	-var navTopColor = 'white'
+	-var buyBlock = {bgColor: 'blackBlue', buttonColor: 'gray', buttonText: 'buy cesis'}
+	-var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+	include ../modules/greet-page
+	include ../modules/testimonials
+
+	+greet-page('I am Cesis', 
+	'Let’s make your website Great Again!',
+	'View portfolio', 'white')
+	section#s-letsmake
+		.introduction
+			.introduction-description
+				h3.introduction-description__title Let’s make your design great again
+				p.introduction-description__subtitle I build identities and experiences to elevate &#x26; empower organizations.
+				button.cesis-btn.introduction-description__button Get in touch
+			.introduction-img: img(src="" data="static/img/"+fileName+"/letsmake-img.png")
+		.introduction
+			.introduction-img: img(src="" data="static/img/"+fileName+"/intro-bg.png")
+			.introduction-description
+				h3.title-tertiary.introduction-description__title.introduction-description__title--normilized Who I am?
+				.introduction-description__subtitle I build identities and experiences to elevate &#x26; empower organizations.
+				.introduction-description__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.<br><br>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.
+				button.cesis-btn.introduction-description__button About me
+	
+	include ../blocks/_header
+	
+	include ../blocks/main-content
+
+	include ../blocks/prices
+	
+	section#s-banner-main
+		.banner-wrapper
+			.container
+				.banner
+					.banner-logo: img(src="" alt='logo-secondary' data="static/img/logos/logo-big.png")
+					.banner-content
+						h1.title-secondary.banner-content__title Let’s make something great together
+						p.banner-content__subtitle I build identities and experiences to elevate &#x26; empower organizations
+	section#s-works-slider
+		.container
+			.dummy-container
+				.dummy.dummy--red
+				.dummy.dummy--green
+				.dummy.dummy--violet
+			.slider-description
+				.slider-description__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.<br><br> Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor.sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				ul.slider-description-menu
+					li.slider-description-menu__item: a.slider-description-menu__link(href="#") Work together
+					li.slider-description-menu__item: a.slider-description-menu__link(href="#") My services
+					li.slider-description-menu__item: a.slider-description-menu__link(href="#") Get in touch
+
+	section#s-testimonials
+		.testimonials-wrapper
+			.container
+				.testimonials
+					+testimonialsIntro('Testimonials', 'Why Cesis is one of the best WordPress Theme on ThemeForest. Let’s ask our customers.')
+					.testimonials-slider
+						+testimonialsItem('testimonials-3.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Jordan Flores', 'Invision App')
+						+testimonialsItem('testimonials-1.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Jordan Flores', 'Invision App')
+						+testimonialsItem('testimonials-2.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Jordan Flores', 'Invision App')
+
+	include ../blocks/partners
+	
+	section#s-posts
+		.post-wrapper
+			.post
+				.post__category featured post
+				.post__info Apr 10, 2017  /  John Doe
+				h5.post__title How to improve your website in 1 month
+				.post__text Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+				button.post__button.post__button--white read more
+			.post
+				.post__category tips &#x26; tricks
+				.post__info Apr 10, 2017    /  John Doe
+				h5.post__title Esiest way to pick right color for your design
+				.post__text Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+				button.post__button.post__button--white read more
+			.post-view-all
+				.post-view-all__title News
+				.post-view-all__subtitle I build identities and experiences to elevate &#x26; empower organizations.
+				button.post__button.post__button--gray all articles
+	include ../blocks/buy
+	include ../blocks/_footer

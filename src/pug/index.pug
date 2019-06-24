@@ -1,0 +1,17 @@
+- var activePage = {home: false,about: false, contact: true, getStarted: false, portfolio: false}
+
+
+if activePage.about
+  include pages/about
+
+if activePage.home
+  include pages/home
+
+if activePage.contact
+  include pages/contact
+
+if activePage.getStarted
+  include pages/get-started
+
+if activePage.portfolio
+  include pages/portfolio

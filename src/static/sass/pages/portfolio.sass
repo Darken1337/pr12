@@ -1,0 +1,34 @@
+@import '../variables'
+@import '../mixins.scss'
+  
+  
+@import '../modules/navigation-top'
+@import '../modules/header'
+@import '../modules/main-content'
+@import '../modules/prices'
+@import '../modules/partners'
+@import '../modules/buy'
+@import '../modules/footer'
+
+.banner
+  font-size: 1rem
+  text-align: center
+  &__body
+    max-width: 986px
+    margin: 7.81vw auto
+  &__subtitle
+    font-size: $blue-gray
+    font-size: 3.6em
+    margin-top: 3.7rem
+
++respond(laptop)
+  .banner
+    font-size: .8rem
+
++respond(tablet)
+  .banner
+    font-size: .7rem
+
++respond(phone)
+  .banner
+    font-size: .5rem

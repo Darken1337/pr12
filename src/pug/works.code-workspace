@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "C:\\xampp\\htdocs\\projects\\2048"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\js"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\wordpress\\wp-content\\themes\\merkury_landing"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\pr11"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\portfolio"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\nodeJS.learn()"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\pr11\\wp-content\\themes\\_wooder"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\pr12"
+		},
+		{
+			"path": "D:\\Program Files\\Downloads\\Codes here\\requestAnimation"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "requestAnimation",
+		"editor.fontSize": 18,
+		"editor.tabSize": 2,
+		"editor.cursorStyle": "line-thin",
+		"window.zoomLevel": 0,
+		"zenMode.fullScreen": false
+	}
+}

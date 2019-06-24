@@ -1,0 +1,85 @@
+//Main-content
+.works
+  display: grid
+  margin: 0 auto
+  grid-template-areas: "article1 article1 article2 article2" "article1 article1 article3 article3" "article4 article5 article5 article6" "article4 article5 article5 article7" "article8 article8 article9 article9" "article8 article8 article9 article9"
+  grid-auto-columns: 25%-1.6%
+  grid-auto-rows: 18.23vw
+  grid-column-gap: 24px
+  grid-row-gap: 24px
+  justify-content: center
+
+.article
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+  padding: 0 0 4.5rem 5rem
+  text-align: left
+  background-color: #cfdbdf
+  transition: all .3s ease
+  cursor: pointer
+  &:hover
+    background-color: $violet-darker
+  &:first-child
+    grid-area: article1
+  &:nth-child(2)
+    grid-area: article2
+  &:nth-child(3)
+    grid-area: article3
+  &:nth-child(4)
+    grid-area: article4
+  &:nth-child(5)
+    grid-area: article5
+  &:nth-child(6)
+    grid-area: article6
+  &:nth-child(7)
+    grid-area: article7
+  &:nth-child(8)
+    grid-area: article8
+  &:nth-child(9)
+    grid-area: article9
+  &__category
+    font-family: 'pop-med', sans-serif
+    font-size: 1.8rem
+    color: $white
+    margin-bottom: 9px
+    letter-spacing: -0.05em
+    line-height: .8
+  &__title
+    font-family: 'pop-semibold', sans-serif
+    font-size: 2.4rem
+    color: $white
+    letter-spacing: -0.05em
+    line-height: .8
+
+#s-main .container
+  text-align: center
+
+.button-view-all
+  display: inline-block
+  border: 1px solid $gray-main
+  color: $blue-gray
+  margin: 2.618vw auto 7.81vw auto !important
+
+
+  &::after
+    background-color: $white
+  &::before
+    background-color: $white
+  &:hover
+    background-color: $gray-main
+    color: $white
+
+
++respond(laptop)
+  .works
+    grid-template-areas: 'article1 article2' 'article3 article4' 'article5 article6' 'article7 article8' 'article9 article9'
+    grid-auto-columns: 40%
+    justify-content: center
+
++respond(tablet)
+  .works
+    grid-template-areas: 'article1' 'article2' 'article3' 'article4' 'article5' 'article6' 'article7' 'article8' 'article9'
+    grid-auto-columns: 90%
+    grid-auto-rows: 35rem
+

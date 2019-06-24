@@ -1,0 +1,82 @@
+@import '../variables'
+@import '../mixins.scss'
+
+.get-started
+  display: flex
+  min-height: 100vh
+
+.sign-up
+  max-width: 505px
+  margin: 0 auto
+  flex: 0 1 75%
+  padding: 13.02vw 0
+  order: 2
+  &__pre-title
+    font-size: 3.6em
+    color: $blue-gray
+    text-align: center
+    span
+      color: $gray-main
+      line-height: .8
+  &__title
+    font-size: 8em
+    color: $blue-gray
+    letter-spacing: -4px
+    line-height: .8
+    +semiBold
+    margin-bottom: 10rem
+    margin-top: 3rem
+    text-align: center
+    &--underline
+      position: relative
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -.5rem
+        z-index: 1
+        left: 2% 
+        width: 94%
+        height: 1.8rem
+        background-color: $violet-lighter
+    &--violet
+      color: $violet-lighter
+
+  &__form
+    font-size: 1rem
+  
+
+.aside
+  flex: 0 1 25%
+  background-image: linear-gradient(-55deg, #7443ff 0%, #4afff7 100%)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 4rem
+  order: 1
+  &__content
+    color: $white
+    font-size: 1rem
+  &__rights
+    margin-bottom: 1.7rem
+    font-size: 1.4em
+  
++respond(tablet)
+  .get-started
+    flex-direction: column
+    justify-content: space-between
+
+  .sign-up
+    padding-left: 15px
+    padding-right: 15px
+    order: 1
+
+  .aside
+    flex-direction: row
+    order: 2
+
++respond(phone)
+  .sign-up
+    font-size: .8rem
+    &__title
+      letter-spacing: 0px

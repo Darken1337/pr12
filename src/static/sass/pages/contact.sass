@@ -1,0 +1,139 @@
+@import '../variables'
+@import '../mixins.scss'
+
+@import '../modules/greet-page'
+@import '../modules/footer'
+
+.in-touch
+  display: flex
+  justify-content: space-between
+  padding-top: 7.81vw
+  padding-bottom: 5.21vw
+  border-bottom: 1px solid rgba(#666666, .3)
+  &__content
+    max-width: 452px
+    font-size: 1rem
+  &__name
+    font-size: 2.4em
+    color: $violet-lighter
+    padding-left: 2rem
+    position: relative
+    line-height: .8
+    +semiBold
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 2px
+      background-color: $violet-lighter
+      height: 100%
+  &__title
+    margin: 5rem 0
+    +semiBold
+    font-size: 6em
+    line-height: 1.2
+    letter-spacing: -4px
+    color: $blue-gray
+    max-width: 350px
+  &__subtitle
+    margin-top: 5.8rem
+    font-size: 1.8em
+    color: $blue-gray
+    line-height: 1.7
+    max-width: 370px
+  &__text
+    margin: 4rem 0
+    font-size: 1.4em
+    color: $gray-1
+    max-width: 440px
+    line-height: 1.7
+  &-form
+    flex: 0 1 480px
+    font-size: 1rem 
+    &__button
+      margin-top: 5rem
+
+.form
+  &-select
+    display: block
+    border-bottom: 1px solid rgba(#666666, .3)
+    position: relative
+    select
+      display: none
+    &__icon
+      position: absolute
+      top: 50%
+      right: 0
+      width: 16px
+      height: auto
+
++respond(laptop)
+  .in-touch
+    &__content
+      flex: 0 1 350px
+      font-size: 1.1rem
+    &-form
+      flex: 0 1 400px
+      font-size: 1.1rem
+
++respond(tablet)
+  .in-touch
+    flex-direction: column
+    &__content
+      max-width: 70%
+      margin: 0 auto
+    &-form
+      width: 70%
+      margin: 0 auto
+      font-size: 1.3rem
+
+//Socials section
+.socials
+  display: flex
+  background-image: linear-gradient(to right, #93eef9 0%, #7443ff 100%)
+  &__item
+    width: 20%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4.69vw 0 2.65vw 0
+    flex: 1 1 325px
+    padding-bottom: 
+    font-size: 3.8rem
+    color: $white
+    flex-direction: column
+    cursor: pointer
+    &:not(:last-child)
+      border-right: 2px solid #cccccc
+  &__description
+    font-size: 1.4rem
+    margin-top: 3.5rem
+    color: $white
+    text-align: center
+    transition: all .3s ease
+    opacity: 0
+
++respond(tablet)
+  .socials
+    flex-wrap: nowrap
+    &__item
+      width: 16.66%
+      padding: 4.69vw 0
+      &:nth-child(3)
+        border-right: 2px solid #cccccc
+    &__description
+      display: none
+
++respond(phone)
+  .socials
+    flex-wrap: nowrap
+    &__item
+      width: 16.66%
+      padding: 4.69vw 0
+      &:nth-child(3)
+        border-right: 2px solid #cccccc
+    &__description
+      display: none
+

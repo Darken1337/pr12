@@ -1,0 +1,25 @@
+nav.nav-top
+  .logo: img(src="" alt="logo" data="static/img/logos/" + logoTop + '.png')
+  button.nav-top__hamb#menuAdaptiveInit
+    span.nav-top__line(class=navTopColor == 'black' ?  'nav-top__line--black' : navTopColor == 'white' ? 'nav-top__line--white' : null)
+    span.nav-top__line(class=navTopColor == 'black' ?  'nav-top__line--black' : navTopColor == 'white' ? 'nav-top__line--white' : null)
+    span.nav-top__line(class=navTopColor == 'black' ?  'nav-top__line--black' : navTopColor == 'white' ? 'nav-top__line--white' : null)
+.menu-adaptive-wrapper#menuAdaptive
+  nav.menu-adaptive-navigation
+    ul.menu-adaptive
+      li.menu-adaptive__item: a.menu-adaptive__link Home
+      li.menu-adaptive__item: a.menu-adaptive__link About
+      li.menu-adaptive__item: a.menu-adaptive__link Portfolio
+      li.menu-adaptive__item: a.menu-adaptive__link Services
+      li.menu-adaptive__item: a.menu-adaptive__link Blog
+      li.menu-adaptive__item: a.menu-adaptive__link Contact
+    ul.menu-adaptive-socials
+      li
+        a.menu-adaptive-socials__item: i.fab.fa-twitter
+      li
+        a.menu-adaptive-socials__item: i.fab.fa-instagram
+      li
+        a.menu-adaptive-socials__item: i.fab.fa-dribbble
+      li
+        a.menu-adaptive-socials__item: i.fab.fa-behance
+  button.menu-adaptive__close#menuAdaptiveClose: i.fas.fa-times

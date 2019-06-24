@@ -1,0 +1,121 @@
+extends ../layout/main.pug
+
+block variables
+  -var title = 'About'
+  -var fileName = 'about'
+  -var build = false
+  -var navTopColor = 'white'
+  -var logoTop = 'logo'
+  -var buyBlock = {bgColor: 'blackBlue', buttonColor: 'gray', buttonText: 'buy cesis'}
+  -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+  include ../modules/greet-page
+  include ../modules/testimonials
+
+
+  +greet-page('Hello!',
+  'I am Tranmautritam',
+  'view portfolio', 'white')
+
+  section#s-intro
+    .container
+      .intro
+        .intro__content
+          .intro__name TRANMAUTRITAM
+          h2.intro__title Art Director at Cesis WordPress
+          .intro__subtitle I build identities and experiences to elevate 	&#38; empower organizations.
+          .intro__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat 
+          button.intro__button portfolio
+        .intro-quote
+          .intro-quote__image
+          .intro-quote__text “ There are three responses to a piece of design – yes, no, &#160; Wow! Wow is the one to aim for ”
+          .intro-quote__author Milton Glaser
+  section#s-skills
+    .skills-wrapper
+      .container
+        .skills
+          .skills-intro 
+            h3.skills-intro__title My Skills
+            .skills-intro__subtitle Why Cesis is one of the best WordPress Theme on ThemeForest. Let’s ask our customers.
+          .skills-row
+            .skills-item
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description UX/UI Design
+            .skills-item#skillsItem
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description Graphic Design
+            .skills-item
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description Web Development
+            .skills-item
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description Photography
+            .skills-item
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description Interaction Design
+            .skills-item
+              .skills-circle
+                .skills-circle__active-border
+                  .skills-circle__item
+                    .skills-circle__perc 0%
+              .skills-item__description Applications
+  section#s-customers
+    .container
+      .customers
+        .customers-left
+          h3.customers__title Customers
+          .customers__subtitle I build identities and experiences to elevate 	&#38; empower organizations.
+          .customers__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+        .customers-right
+          button.customers__button Portfolio
+  section#s-slider-about
+    .slider-about
+      .slider-about__item
+        .slider-about__title scandinavian
+        .slider-about__subtitle fresh brending
+  section#s-partners
+    include ../blocks/partners
+  section#s-testimonials
+    .testimonials-wrapper.testimonials-wrapper--violet
+      .container
+        .testimomials
+          +testimonialsIntro('Testimonials', 'Why Cesis is one of the best WordPress Theme on ThemeForest. Let’s ask our customers.', 'white')
+        .testimonials-slider
+          +testimonialsItem('testimonials-1.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Sam Isbister', 'Mass Impressions', 'violet')
+          +testimonialsItem('testimonials-2.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Jordan Flores', 'Invision App', 'violet')
+          +testimonialsItem('testimonials-3.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Grey Fox', 'TheFox WordPress', 'violet')
+          +testimonialsItem('testimonials-2.png', 'Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.', 'Jordan Flores', 'Invision App', 'violet')
+  section#s-socials
+    .socials
+      .socials__item
+        i.fab.fa-facebook-f
+      .socials__item
+        i.fab.fa-twitter
+      .socials__item
+        i.fab.fa-behance
+      .socials__item
+        i.fab.fa-dribbble
+      .socials__item
+        i.fab.fa-google-plus-g
+      .socials__item
+        i.fab.fa-wordpress
+  section#s-buy
+    include ../blocks/buy
+  include ../blocks/_footer   
+  //- script(src="static/libs/libs.min.js")

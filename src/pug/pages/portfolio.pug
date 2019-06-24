@@ -1,0 +1,24 @@
+extends ../layout/main
+
+block variables
+  -var build = true
+  -var title = 'Portfolio'
+  -var fileName = 'portfolio'
+  -var navTopColor = 'black'
+  -var logoTop = 'logo-color'
+  -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch'}
+  -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+  .banner
+    include ../modules/navigation-top
+    .container
+      .banner__body
+        h1.title-primary Our Work
+        .banner__subtitle Let’s make your website Great Again!
+  include ../blocks/_header
+  include ../blocks/main-content
+  include ../blocks/prices
+  include ../blocks/partners
+  include ../blocks/buy
+  include ../blocks/_footer

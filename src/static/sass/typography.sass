@@ -1,0 +1,32 @@
+.title-secondary
+  border-right: 10px solid $violet-lighter
+  +semiBold
+  font-size: 8em
+  color: $blue-gray
+  line-height: 1.2
+  letter-spacing: -4px
+
+.title-primary
+  font-size: 20em
+  line-height: 0.8
+  letter-spacing: -12px
+  +semiBold
+  &--gray
+    color: $blue-gray
+  &--white
+    color: $white
+
+.title-tertiary
+  letter-spacing: -4px
+  color: $white
+  font-size: 8rem
+  line-height: 1.2
+  +semiBold
+
++respond(tablet)
+  .title-primary
+    letter-spacing: -4px
+
+  .title-tertiary
+    font-size: 5rem
+    letter-spacing: -2px

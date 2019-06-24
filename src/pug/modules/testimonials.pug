@@ -1,0 +1,14 @@
+mixin testimonialsIntro(title, subtitle, color)
+  .testimonials-intro 
+    h3.title-tertiary.testimonials-intro__title(class= color == 'white' ? 'testimonials-intro__title--white' : null)= title 
+    .testimonials-intro__subtitle.testimonials-intro__subtitle--white= subtitle
+      
+
+mixin testimonialsItem(imgSrc, text, author, organization, color)
+  .testimonials-slider-item(class= color == 'violet' ? 'testimonials-slider-item--violet' : null)
+    .testimonials-slider-item__img: img(src='static/img/testimonials/'+imgSrc alt="user-photo" data='static/img/testimonials/'+imgSrc)
+    .testimonials-slider-item__text= text 
+    .testimonials-slider-item__author= author 
+    .testimonials-slider-item__organization= organization
+
+    

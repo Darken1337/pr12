@@ -1,0 +1,46 @@
+.slick-track
+  vertical-align: baseline
+  
+.partners
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  position: relative
+  &__item
+    width: 20%
+    padding: 60px 30px
+    position: relative
+    align-self: center
+    &--fixed
+      padding: 30px 30px
+    img
+      max-width: 180px
+      height: auto
+      max-height: 170px
+      margin: 0 auto
+  &__button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 50%
+    padding: 10px
+    font-size: 2rem
+    z-index: 100 
+    color: $black
+    font-size: 
+    &--prev
+      left: 30px
+    &--next
+      right: 30px
+
++respond(tablet)
+  .partners
+    &__item
+      top: 20px
+    &__button
+      font-size: 3rem
+      &--prev
+        left: 0
+      &--next
+        right: 0

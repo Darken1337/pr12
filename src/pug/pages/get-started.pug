@@ -1,0 +1,33 @@
+extends ../layout/main
+
+block variables
+  -var title = 'Sign up'
+  -var fileName = 'get-started'
+  -var build = true
+  -var socialItems = {color: 'white', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+  section#s-get-started
+    .get-started
+      .sign-up
+        .sign-up__pre-title Get Stated
+          span  with
+        .sign-up__title
+          span.sign-up__title--underline Personal   
+          span.sign-up__title--violet  Plan
+        form.sign-up__form(method="POST" action="#")
+          .input
+            input(placeholder="Your name" type="text")
+            i.fas.fa-user.input__icon
+          .input
+            input(placeholder="hello@tranmautritam.com" type="email")
+            i.fas.fa-envelope.input__icon
+          .input
+            input(placeholder="Phone" type="tel")
+            i.fas.fa-phone-volume.input__icon.input__icon--normilize
+          button(type="submit").button-black-border continue
+      .aside
+        .logo.aside__logo: img(src="static/img/logos/logo.png" alt="" data="")
+        .aside__content
+          .aside__rights © 2015 - 2017 Tranmautritam Team. 
+          include ../modules/social-links

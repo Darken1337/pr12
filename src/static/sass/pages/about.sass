@@ -1,0 +1,284 @@
+@import '../variables'
+@import '../mixins.scss'
+
+@import '../modules/greet-page'
+@import '../modules/partners'
+@import '../modules/testimonials'
+@import '../modules/buy'
+@import '../modules/footer'
+
+@font-face 
+  font-family: 'playfair-reg'
+  src: url('../fonts/PlayfairDisplaySC-Regular.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+  
+.intro
+  display: flex
+  padding: 7.81vw 0
+  &__content
+    flex: 1
+
+  &__name
+    font-size: 2.4rem
+    color: $violet-lighter
+    padding-left: 2rem
+    position: relative
+    line-height: .8
+    +semiBold
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 2px
+      background-color: $violet-lighter
+      height: 100%
+  &__title
+    margin: 5rem 0
+
+    +semiBold
+    font-size: 6rem
+    line-height: 1.2
+    letter-spacing: -4px
+    color: $blue-gray
+    max-width: 350px
+  &__subtitle
+    margin-top: 5.8rem
+    font-size: 1.8rem
+    color: $blue-gray
+    line-height: 1.7
+    max-width: 370px
+  &__text
+    margin: 4rem 0
+    font-size: 1.4rem
+    color: $gray-1
+    max-width: 440px
+    line-height: 1.7
+  &__button
+    letter-spacing: 1.2px
+    color: $gray-main
+    padding: 30px 56px
+    text-transform: uppercase
+    border: 1px solid $gray-main
+    font-size: 1.2rem 
+    border-radius: 30px
+    +semiBold
+    &:hover
+      color: $white
+      background-color: $gray-main
+  &-quote
+    flex: 1
+    &__image
+      width: 100%
+      height: 53rem
+      background-color: $violet-lighter
+    &__text
+      font-family: 'playfair-reg', sans-serif
+      font-size: 3rem
+      line-height: 1.6
+      opacity: .7
+      max-width: 445px
+      margin-left: auto
+      color: $blue-gray
+      margin-top: 7.4rem
+      margin-bottom: 3.1rem
+    &__author
+      letter-spacing: 1.6px
+      color: $blue-gray
+      font-size: 1.6rem
+      +semiBold
+      text-transform: uppercase
+      text-align: right
+
++respond(tablet)
+  .intro
+    flex-direction: column
+    align-items: center
+    &__content
+      margin-bottom: 3rem
+
+//Skills
+
+.skills-wrapper
+  padding: 7.56vw 0
+  background-color: #f0fafd
+  position: relative
+
+.skills
+  &-intro
+    max-width: 438px
+    margin: 0 auto 10rem auto
+    text-align: center
+    &__title
+      letter-spacing: -4px
+      color: $blue-gray
+      font-size: 8rem
+      line-height: 1.2
+      +semiBold
+    &__subtitle
+      color: $blue-gray
+      font-size: 1.8rem
+      line-height: 1.7
+  &-row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+  &-item
+    width: 33%
+    text-align: center
+    padding: 7.5rem 0
+    &__description
+      font-size: 1.8rem
+      letter-spacing: -0.9px
+      +medium
+      color: #818586
+      margin-top: 3rem
+  &-circle
+    width: 24rem//12.5vw
+    height: 24rem//12.5vw
+    margin: 0 auto
+    &__active-border
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      background-image: linear-gradient(100deg, transparent 50%, #f0fafd 50%), linear-gradient(90deg, #f0fafd 50%, transparent 50%)
+      position: relative
+    &__item
+      position: absolute
+      top: 2%
+      left: 2%
+      width: 96%
+      height: 96%
+      background-color: #f0fafd
+      border-radius: 50%
+    &__perc
+      font-size: 4rem
+      color: $blue-gray
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
++respond(tablet)
+  .skills
+    &-item
+      width: 50%
+
++respond(phone)
+  .skills
+    &-intro
+      margin-bottom: 5rem
+    &-item
+      width: 100%
+      padding: 10px
+
+
+//Customers
+
+
+
+.customers
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  padding-top: 7.81vw
+  padding-bottom: 5.2vw
+  &-left
+    max-width: 764px
+  &__title
+    font-size: 8rem
+    +semiBold
+    color: $blue-gray
+    line-height: .8
+  &__subtitle
+    margin-top: 2.8rem
+    margin-bottom: 3.7rem
+    color: $blue-gray
+    font-size: 1.8rem
+  &__text
+    color: $gray-main
+    font-size: 1.4rem
+
+  &__button
+    letter-spacing: 1.2px
+    font-size: 1.2rem
+    color: $black
+    text-transform: uppercase
+
+    padding: 21px 60px
+    border: 1px solid $black
+    border-radius: 52px
+    &:hover
+      color: $white
+      background-color: $black
+      
++respond(tablet)
+  .customers
+    flex-direction: column
+    &-left
+      margin-bottom: 3rem
+
+    &__title
+      font-size: 5rem
+    &__subtitle
+      font-size: 
+
+//Slider about
+
+.slider-about
+  &__item
+    padding: 16.98vw 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background-color: $violet-lighter
+
+  &__title
+    color: $white
+    font-size: 8rem 
+    letter-spacing: -1.6px
+    +semiBold
+    line-height: 0.8
+
+  &__subtitle
+    color: $white
+    font-size: 3rem
+    margin-top: 2rem
+
++respond(tablet)
+  .slider-about
+    &__title
+      font-size: 5rem
+    &__subtitle
+      font-size: 2rem
+
+//Socials
+
+.socials
+  display: flex
+  &__item
+    width: 20%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 4.69vw
+    font-size: 3.8rem
+    i
+      opacity: .5
+    &:hover i
+      opacity: 1
+    &:not(:last-child)
+      border-right: 2px solid rgba($gray-1, .4)
+
++respond(tablet)
+    .socials
+      flex-wrap: wrap
+      &__item
+        width: 33%
+        &:nth-child(3)
+          border-right: 0

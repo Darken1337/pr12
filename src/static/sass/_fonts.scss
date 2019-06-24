@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'pop-med';
+  src: url('../fonts/Poppins-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pop-reg';
+  src: url('../fonts/Poppins-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pop-semibold';
+  src: url('../fonts/Poppins-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pop-thin';
+  src: url('../fonts/Poppins-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src: url('../fonts/fa-brands-400.eot');
+  src: url('../fonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-brands-400.woff') format('woff'),
+  url('../fonts/fa-brands-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Regular";
+  src: url('../fonts/fa-regular-400.eot');
+  src: url('../fonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-regular-400.woff') format('woff'),
+  url('../fonts/fa-regular-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 solid";
+  src: url('../fonts/fa-solid-900.eot');
+  src: url('../fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-solid-900.woff') format('woff'),
+  url('../fonts/fa-solid-900.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

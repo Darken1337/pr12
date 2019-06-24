@@ -1,0 +1,23 @@
+//Header
+
+.nav-main
+  margin-top: 7.8vw
+  margin-bottom: 4.97vw
+
+.menu-main
+  display: flex
+  justify-content: center
+  &__item:not(:last-child)
+    margin-right: 26px
+  &__link
+    color: $gray-main
+    font-size: 1.8rem
+    font-family: 'pop-med', sans-serif
+    &:hover
+      color: $blue-gray
+    &--active
+      color: $blue-gray
+
++respond(tablet)
+  .menu-main
+    display: none

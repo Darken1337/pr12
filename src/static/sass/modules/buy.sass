@@ -1,0 +1,34 @@
+//Buy
+
+.buyblock
+  text-align: center
+  &-wrapper
+    padding: 11.52vw 0 
+    &--blue
+      background-color: $blue-dark
+    &--violet
+      background-color: $violet-lighter
+  &__title
+    max-width: 757px
+    margin: 0 auto
+  &__text
+    font-size: 1.8rem
+    color: $white
+    max-width: 550px
+    margin: 2.5rem auto
+  &__button
+    color: $white
+    padding: 2.5rem 6rem
+    text-transform: uppercase
+    +semiBold
+    border-radius: 32px 
+    &--white
+      border: 1px solid $white
+      &:hover
+        background-color: $white
+        color: $violet-lighter
+    &--gray
+      border: 1px solid $gray-main
+      &:hover
+        background-color: $gray-main
+        color: $blue-dark

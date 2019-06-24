@@ -1,0 +1,3 @@
+ul.social-links
+  each val in socialItems.text
+    li.social-links__item: a.social-links__link(href="#" class=socialItems.color === 'gray' ? 'social-links__link--gray' : socialItems.color === 'white' ? 'social-links__link--white' : null)= val

@@ -1,0 +1,64 @@
+@import 'mixins.scss';
+  
+  
+html
+  scroll-behavior: smooth
+  font-size: 62.5%
+  font-family: 'pop-reg', sans-serif
+  +respond(laptop)
+    font-size: 50%
+  +respond(tablet)
+    font-size: 40%
+    
+*, *::before, *::after
+  box-sizing: border-box
+    
+.container
+  width: 100%
+  max-width: 1193px
+  padding: 0 15px
+  margin: 0 auto
+  &--big
+    max-width: 1638px
+
+form
+  margin: 0
+
+body, 
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p
+  margin: 0 
+  padding: 0
+
+ul
+  list-style: none
+  &>li
+    display: block
+    padding: 0
+
+a,
+button
+  display: inline-block
+  text-decoration: none
+  border: 0
+  background: transparent
+  color: inherit
+  outline: 0
+  cursor: pointer
+  transition: all .3s ease
+  &:focus
+    outline: 0
+
+input
+  display: inline-block
+  outline: 0
+  cursor: text
+
+img
+  width: 100%
+  height: auto
