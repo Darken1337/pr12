@@ -6,6 +6,7 @@
 @import '../modules/partners'
 @import '../modules/header'
 @import '../modules/main-content'
+@import '../modules/dummy-slider'
 @import '../modules/prices'
 @import '../modules/testimonials'
 @import '../modules/buy'
@@ -19,9 +20,18 @@
   position: relative
   &-img
     width: 60%
+    img
+      width: 100%
+      height: auto
+      max-width: 1144px
+      max-height: 650px
   &-description
     max-width: 777px
     padding: 0 9.42vw 0 8.38vw
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
     &__title
       font-size: 5rem
       color: $blue-gray
@@ -69,7 +79,7 @@
   &-content
     max-width: 634px 
     &__title
-      padding-right: 6rem
+      padding-right: 5rem
       margin-bottom: 3.7rem
     &__subtitle
       font-size: 1.8rem
@@ -79,34 +89,6 @@
   .banner-logo
     width: 20rem
     margin-right: 20px
-
-.dummy
-  width: 100%
-  height: 70rem
-
-  position: relative
-  &-container__button
-    position: absolute
-    top: 30px
-    z-index: 10000
-    padding: 10px
-
-    +semiBold
-    background-color: $white
-    font-size: 1.8rem
-    border: 1px solid $black
-
-    transform: translateY(-50%)
-    &--prev
-      right: 48px
-    &--next
-      right: 10px
-  &--violet
-    background-color: $violet-lighter
-  &--red
-    background-color: magenta
-  &--green
-    background-color: yellowgreen
 
 
 .slider-description
@@ -169,12 +151,48 @@
   color: $white
   padding: 5.24vw
   position: relative
-  &:first-child
-    grid-area: main-post
-    background-color: $violet-lighter
-  &:nth-child(2)
-    background-color: $blue-light
-    grid-area: small-post
+  background-repeat: no-repeat
+  background-position: center center
+  transition: box-shadow .3s ease, background-size .3s ease, background-position .3s ease
+  position: relative
+  z-index: 1
+  cursor: pointer
+  & > *
+    position: relative
+    z-index: 10
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 5
+  &:hover
+    -webkit-box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    -moz-box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    background-position: center center
+  &--big
+    grid-column: span 1
+    grid-row: span 2
+    background-size: auto 100%
+    &::after
+      background-color: rgba($violet-lighter, .7)
+    &:hover
+      background-size: auto 120%
+      &:after
+        background-color: rgba($violet-lighter, .5)
+  &--small
+    grid-column: span 1
+    grid-row: span 1
+    background-size: 100% auto
+    &::after
+      background-color: rgba($blue-light, .7)
+    &:hover
+      background-size: 120% auto
+      &:after
+        background-color: rgba($blue-light, .5)
   &__title
     font-size: 2.4rem 
     color: $white
@@ -190,7 +208,7 @@
     position: absolute
     top: 0
     left: 0
-    width: 158px
+    min-width: 158px
     text-align: center
     padding: 13px 25px
     text-transform: uppercase

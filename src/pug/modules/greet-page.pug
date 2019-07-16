@@ -1,7 +1,6 @@
 mixin greet-page(title, subtitle, buttonText, color)
   
   .greet-page
-    include ../modules/navigation-top
     .greet-page-content
       h1.title-primary.greet-page-content__title(class= color === 'white' ? 'title-primary--white' : color === 'gray' ? 'title-primary--gray' : null)= title 
       .greet-page-content__subtitle= subtitle

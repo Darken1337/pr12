@@ -6,12 +6,6 @@
 @import '../modules/testimonials'
 @import '../modules/buy'
 @import '../modules/footer'
-
-@font-face 
-  font-family: 'playfair-reg'
-  src: url('../fonts/PlayfairDisplaySC-Regular.ttf') format('truetype')
-  font-weight: 400
-  font-style: normal
   
 .intro
   display: flex
@@ -230,25 +224,54 @@
 //Slider about
 
 .slider-about
+  position: relative
   &__item
     padding: 16.98vw 0
-    display: flex
+    display: flex !important
     justify-content: center
     align-items: center
     flex-direction: column
-    background-color: $violet-lighter
+    font-size: 1rem
+    position: relative
+    z-index: 10
+    background-repeat: no-repeat
+    background-size: 100% auto
+    background-position: center center
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(#b3f0ff, .6)
+      z-index: 20
+    & > *
+      z-index: 30
 
   &__title
-    color: $white
+    color: $blue-moderate
     font-size: 8rem 
     letter-spacing: -1.6px
     +semiBold
     line-height: 0.8
 
   &__subtitle
-    color: $white
+    color: $blue-moderate
     font-size: 3rem
     margin-top: 2rem
+
+  &__button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 3rem
+    z-index: 999
+    color: $blue-moderate
+    &--prev
+      left: 3%
+    &--next
+      right: 3%
 
 +respond(tablet)
   .slider-about

@@ -8,10 +8,17 @@
   justify-content: space-between
   position: relative
   &__item
-    width: 20%
+    width: calc(20% - 5*10px)
+    max-width: 321px
     padding: 60px 30px
+    margin: 5.9rem 1rem
     position: relative
     align-self: center
+    height: auto
+    max-height: 250px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 100% auto
     &--fixed
       padding: 30px 30px
     img

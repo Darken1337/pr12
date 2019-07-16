@@ -48,18 +48,23 @@
     width: 500px
     &__button
       padding: 2.5rem 1rem
+      background-image: url(http://localhost/pr12/wp-content/themes/cesis/static/img/icons/arrow-submit.png)
+      background-position: center center
+      background-repeat: no-repeat
+      color: transparent
+      width: 5%
     &__email
       border: 0
       width: 100%
       padding: 2.5rem 0
       &-wrapper
         display: inline-block
-        width: 90%        
+        width: 85%        
         &::after
           content: ''
           display: block
           width: 100%
-          height: 1px
+          height: 1.1px
           background-color: $gray-main
 
 
@@ -73,14 +78,10 @@
     &-news
       &-form
         width: 100%
-        display: flex
-        justify-content: center  
 
 +respond(phone)
   .footer
     &-news
-      &__title
-        justify-content: center
       &-form
         &__email-wrapper
           width: 80%

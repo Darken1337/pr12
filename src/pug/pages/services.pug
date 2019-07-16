@@ -1,0 +1,75 @@
+extends ../layout/main
+
+block variables
+    -var title = 'Services'
+    -var fileName = 'services'
+    -var build = true
+    -var navTopColor = 'white'
+    -var logoTop = 'logo'
+    -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch', suptitle: false}
+    -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+    include ../modules/navigation-top
+    .works-prev-wrapper(style="background-image: url(static/img/services-bg.png)")
+        .container.container--big
+            .works-prev.js-works-prev
+                .work-prev.work-prev--big
+                .work-prev.work-prev--big
+                .work-prev.work-prev--small-horizontally
+                .work-prev.work-prev--big
+                .work-prev.work-prev--small-horizontally
+                .work-prev.work-prev--big
+                .work-prev.work-prev--small-vertically
+                .work-prev.work-prev--big
+                .work-prev.work-prev--very-small
+                .work-prev.work-prev--big
+                .work-prev.work-prev--very-small
+            button.works-prev__move-down#buttonMoveDown: img(src="" alt="arrow down" data="static/img/icons/arrow.png")
+    section#s-services
+        .container
+            .services-intro
+                h2.services-intro__title Services
+                .services-intro__subtitle Let’s make your website Great Again!
+            .services
+                .services-column
+                    article.services-article
+                        h3.services-article__title.article-title Web Design.
+                        p.services-article__text.article-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit.
+                    .services__image.services__image--big-vertically
+                .services-column
+                    .services__image.services__image--normal
+                    .featured
+                        h3.featured__title Featured Projects
+                        ul.featured__menu
+                            li.featured__item
+                                a.featured__link  North Oxford Gymnastic
+                            li.featured__item
+                                a.featured__link MIEQUITY - Free Website PSD Template
+                            li.featured__item
+                                a.featured__link MISOCIAL - Free Website PSD
+                            li.featured__item
+                                a.featured__link UpStanders Cafe | Coffee Shop PSD Template
+                            li.featured__item
+                                a.featured__link Thefox WordPress Landing Page version 2.0
+                        button.featured__button.button-black-border get in touch
+            .branding
+                article.branding-article
+                    h3.branding-article__title.article-title Branding.
+                    p.branding-article__text.article-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                ul.branding-menu
+                    li.branding-menu__item
+                            a.branding-menu__link product mockups
+                    li.branding-menu__item
+                            a.branding-menu__link famous brands
+                    li.branding-menu__item
+                            a.branding-menu__link get in touch
+            .dummy-slider-wrapper
+                include ../blocks/dummy-slider 
+    section#s-prices
+        include ../blocks/prices
+    section#s-partners
+        include ../blocks/partners
+    section#s-buyblock
+        include ../blocks/buy
+    include ../blocks/_footer

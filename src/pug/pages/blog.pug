@@ -1,0 +1,78 @@
+extends ../layout/main.pug
+
+block variables
+    -var title = 'Blog'
+    -var fileName = 'blog'
+    -var build = false
+    -var navTopColor = 'black'
+    -var logoTop = 'logo-color'
+    -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch'}
+    -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+block content
+    include ../modules/navigation-top
+    .banner-wrapper
+        .banner
+            .banner__title: img.banner__image(src="" alt="Creator" data="static/img/title.png")
+            .banner__subtitle Dream Big, Think Different, Do Great
+    include ../blocks/_header
+    section#s-blog
+        .container.container--big
+            .blog.js-blog
+                .blog-slide
+                    .article.article--big
+                        .article__category.article__category--featured featured post
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+
+                .blog-slide
+                    .article.article--normal
+                        .article__category.article__category--news breaking news 
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+
+                    .article.article--normal
+                        .article__category.article__category--branding branding
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+                .blog-slide
+                    .article.article--normal
+                        .article__category.article__category--news breaking news 
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+
+                    .article.article--normal
+                        .article__category.article__category--branding branding
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+                .blog-slide
+                    .article.article--big
+                        .article__category.article__category--featured featured post
+                        .article__meta Apr 10, 2017   /   John Doe
+                        h2.article__title How to improve your website in 1 month
+                        p.article__excerpt Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.
+            .blog-dots
+    section#s-insights
+        .insights-wrapper
+            .container.container--big
+                .insights-intro
+                    h2.insights-intro__title Design Insight
+                    .insights-intro__subtitle Why Cesis is one of the best WordPress Theme on ThemeForest. Let’s ask our customers.
+                .insights-blog.js-insights-blog
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                    include ../modules/insight
+                button.insights__button
+    include ../blocks/buy
+    include ../blocks/_footer

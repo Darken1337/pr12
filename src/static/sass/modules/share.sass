@@ -1,0 +1,43 @@
+// Секция меню 
+
+.share
+    margin-top: 5.2vw
+    margin-bottom: 6.7vw
+    &__title
+        text-align: center
+        font-size: 1.8rem
+        +semiBold
+        letter-spacing: -0.72px
+        color: $blue-gray
+        margin-bottom: 3rem
+    &-menu
+        display: flex
+        justify-content: center
+        & > *:not(:last-child)
+            margin-right: 3.6rem
+            position: relative
+            &::after
+                content: '.'
+                position: absolute
+                bottom: 3px
+                color: #72787a
+                right: -2rem
+        &__icon
+            margin-right: 1.4rem
+            font-size: 1.4rem
+            display: none
+            color: #262b40
+        &__link
+            cursor: pointer
+            &:hover
+                .share-menu__icon
+                    display: inline-block
+                    animation: fadeIn .3s linear
+                span
+                    color: #262b40
+                
+            span
+                font-size: 1.8rem
+                color: #72787a
+                +semiBold
+                transition: color .3s linear

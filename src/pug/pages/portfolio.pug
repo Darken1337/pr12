@@ -6,12 +6,12 @@ block variables
   -var fileName = 'portfolio'
   -var navTopColor = 'black'
   -var logoTop = 'logo-color'
-  -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch'}
+  -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch', suptitle: false}
   -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
 
 block content
+  include ../modules/navigation-top
   .banner
-    include ../modules/navigation-top
     .container
       .banner__body
         h1.title-primary Our Work
@@ -20,5 +20,6 @@ block content
   include ../blocks/main-content
   include ../blocks/prices
   include ../blocks/partners
-  include ../blocks/buy
+  section#s-buy
+    include ../blocks/buy
   include ../blocks/_footer

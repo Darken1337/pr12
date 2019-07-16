@@ -1,0 +1,146 @@
+@import '../variables'
+@import '../mixins.scss'
+
+@import '../modules/navigation-top'
+@import '../modules/dummy-slider'
+@import '../modules/share'
+@import '../modules/buy'
+@import '../modules/footer'
+
+// Баннер 
+
+.banner
+    padding-top: 12.5vw
+    padding-bottom: 4.69vw
+    margin: 0 auto
+    position: relative
+    text-align: center
+    font-size: 1rem
+    +respond(tablet)
+        font-size: .6rem
+        padding-top: 100px
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: $violet-lighter
+        width: 230px
+        height: 5px    
+    &__title
+        max-width: 939px  
+        color: $blue-gray
+        font-size: 8em
+        letter-spacing: -3.2px
+        line-height: 1.2
+        margin: 0 auto
+        +semiBold
+    &__category
+        margin-top: 2rem
+        font-size: 3em
+        color: $blue-gray
+
+// Секция статей
+
+.articles
+    margin-top: 4.8rem
+    margin-bottom: 7.6vw
+
+.article
+    display: flex
+    justify-content: space-between
+    margin: 4.8rem auto
+    &--without-image
+        max-width: 967px
+        flex-wrap: wrap
+        +respond(phone)
+            flex-wrap: nowrap
+            flex-direction: column
+    &--with-image
+        +respond(tablet)
+            flex-direction: column
+            align-items: center
+    &__image
+        height: auto
+        align-self: center
+        margin-right: 10rem
+    &__content
+        flex: 0 1 50%
+        +respond(laptop)
+            flex: 0 1 auto
+    &__title
+        letter-spacing: -1.5px
+        font-size: 3rem
+        flex: 0 1 100%
+    &__text
+        line-height: 1.7
+        margin-top: 3.5rem
+        &--regular
+            color: $blue-gray
+            font-size: 1.8rem
+        &--small
+            color: #72787a
+            font-size: 1.4rem
+        &--full-width
+            flex: 0 1 100%
+        &--half-width
+            flex: 0 1 calc(100%/2 - 48px)
+            max-width: 458px
+    &-quote
+        color: $blue-gray
+        +respond(phone)
+            flex-direction: column
+            text-align: center
+        &__prev
+            max-width: 390px
+        &__title
+            letter-spacing: -3.2px
+            font-size: 8rem
+            margin-bottom: 3rem
+            max-width: 334px
+            line-height: 1.1
+            +semiBold
+        &__subtitle
+            font-size: 1.8rem
+        &__body
+            max-width: 445px
+            text-align: right
+        &__text
+            font-family: 'PlayFair'
+            font-size: 3rem
+            opacity: .7
+            line-height: 1.6
+            margin-bottom: 2.5rem
+        &__author
+            letter-spacing: 1.6px
+            font-size: 1.6rem
+            text-transform: uppercase
+
+// Вам может понравиться
+
+#s-may-like
+    position: relative
+
+.js-may-like-slider
+    &-wrapper
+        position: relative
+    &__dots
+        position: absolute
+        left: 46%
+        transform: translateX(-50%)
+        bottom: 7rem
+        +respond(phone)
+            display: none
+        & > .slick-dots
+            display: flex !important
+            & > li
+                color: transparent
+                width: 10px
+                height: 10px
+                background-color: #898b8e
+                border-radius: 50%
+                &.slick-active
+                    background-color: $white
+                &:not(:last-child)
+                    margin-right: 10px

@@ -51,3 +51,11 @@
 @mixin thin{
   font-family: 'pop-thin', sans-serif;
 }
+
+@mixin image($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background-size: $width $height;
+  background-repeat: no-repeat;
+  background-image: url($url);
+}

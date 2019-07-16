@@ -2,8 +2,8 @@
 .works
   display: grid
   margin: 0 auto
-  grid-template-areas: "article1 article1 article2 article2" "article1 article1 article3 article3" "article4 article5 article5 article6" "article4 article5 article5 article7" "article8 article8 article9 article9" "article8 article8 article9 article9"
-  grid-auto-columns: 25%-1.6%
+  grid-template-areas: 
+  grid-template-columns: repeat(4, 1fr)
   grid-auto-rows: 18.23vw
   grid-column-gap: 24px
   grid-row-gap: 24px
@@ -16,41 +16,77 @@
   padding: 0 0 4.5rem 5rem
   text-align: left
   background-color: #cfdbdf
-  transition: all .3s ease
   cursor: pointer
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 100% auto
+  transition: box-shadow .3s ease, background-size .3s ease, background-position .3s ease
+  position: relative
+  &::after
+  	content: ''
+  	position: absolute
+  	display: block
+  	top: 0
+  	left: 0
+  	right: 0
+  	bottom: 0
+  	background-color: rgba($violet-lighter, .4)
+  	z-index: 10
   &:hover
-    background-color: $violet-darker
-  &:first-child
-    grid-area: article1
-  &:nth-child(2)
-    grid-area: article2
-  &:nth-child(3)
-    grid-area: article3
-  &:nth-child(4)
-    grid-area: article4
-  &:nth-child(5)
-    grid-area: article5
-  &:nth-child(6)
-    grid-area: article6
-  &:nth-child(7)
-    grid-area: article7
-  &:nth-child(8)
-    grid-area: article8
-  &:nth-child(9)
-    grid-area: article9
+    -webkit-box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    -moz-box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    box-shadow: inset 0px 0px 76px 19px rgba(255,255,255,1)
+    & > *
+      opacity: 0
+  &:hover::after
+  	display: none
+  &--big
+    grid-column: span 2
+    grid-row: span 2
+    &:hover
+      background-size: 120% auto
+      background-position: top center
+  &--small-horizontal
+    grid-column: span 2
+    grid-row: span 1
+    &:hover
+      background-size: 120% auto
+      background-position: center center
+  &--small-vertical
+    grid-column: span 1
+    grid-row: span 2
+    background-size: auto 100%
+    &:hover
+      background-size: auto 120%
+      background-position: top center
+  &--very-small
+    grid-column: span 1
+    grid-row: span 1
+    &:hover
+      background-size: 120% auto
+      background-position: center center
   &__category
     font-family: 'pop-med', sans-serif
+    opacity: 1
+    transition: opacity .3s ease
     font-size: 1.8rem
     color: $white
     margin-bottom: 9px
     letter-spacing: -0.05em
     line-height: .8
+    position: relative
+    z-index: 20
   &__title
     font-family: 'pop-semibold', sans-serif
+    opacity: 1
+    transition: opacity .3s ease
     font-size: 2.4rem
+    z-index: 20
     color: $white
     letter-spacing: -0.05em
     line-height: .8
+    position: relative
+
 
 #s-main .container
   text-align: center

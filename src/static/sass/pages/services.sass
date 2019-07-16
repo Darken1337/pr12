@@ -1,0 +1,175 @@
+@import '../variables'
+@import '../mixins.scss'
+
+@import '../modules/navigation-top'
+@import '../modules/dummy-slider'
+@import '../modules/prices'
+@import '../modules/partners'
+@import '../modules/buy'
+@import '../modules/footer'
+
+.works-prev
+    margin-bottom: 3.7rem
+    display: grid
+    grid-template-columns: repeat(16, 1fr)
+    grid-auto-rows: 5vw
+    grid-column-gap: 12px
+    grid-row-gap: 12px
+    grid-auto-flow: dense
+    +respond(tablet)
+        display: block
+    &-wrapper
+        background-size: auto 100%
+        background-position: top center
+        background-repeat: no-repeat
+        padding-top: 15rem
+        padding-bottom: 5rem
+    &__move-down
+        margin-left: 50%
+        transform: translateX(-50%)
+
+.work-prev
+    background-color: #1bfff7
+    +respond(tablet)
+        margin: 0 10px
+        height: calc(5vw * 8)
+    &--big
+        grid-column: span 4
+        grid-row: span 4
+    &--small-horizontally
+        grid-column: span 4
+        grid-row: span 2
+    &--small-vertically
+        grid-column: span 2
+        grid-row: span 4
+    &--very-small
+        grid-column: span 2
+        grid-row: span 2
+
+.js-works-prev
+    position: relative
+    &__button
+        color: $violet-lighter
+        font-size: 2rem
+        width: 3rem
+        height: 3rem 
+        background-color: $white
+        text-align: center
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        transform: translateX(-50%)
+        z-index: 999
+        &--prev
+            left: 1%
+        &--next
+            right: -1%
+
+
+// Секции сервисов
+
+.article-title
+    letter-spacing: -1.5px
+    font-size: 3rem
+    color: $blue-gray
+.article-text
+    color: #72787a
+    font-size: 1.4rem
+    line-height: 1.7
+
+.services
+    display: flex
+    +respond(tablet)
+        flex-direction: column
+        align-items: center
+    &-column
+        flex: calc(100%/2 - 10rem)
+        &:first-child
+            margin-right: 5.2vw
+    &-intro
+        margin: 6.98vw 0
+        text-align: center
+        font-size: 1rem
+        +respond(tablet)
+            font-size: .6rem
+        +respond(phone)
+            font-size: .4rem
+        &__title
+            color: $blue-gray
+            font-size: 20em
+            +semiBold
+            line-height: .8
+            margin-bottom: 2.5rem
+        &__subtitle
+            font-size: 3.6em
+            color: $blue-gray
+    
+    &-article
+        flex: 0 1 584px
+        &__title
+            margin-bottom: 1.3rem
+    &__image
+        flex: 0 1 535px
+        background-color: #1d2126
+        &--normal
+            height: 25.21vw
+            margin-top: 3.28vw
+            margin-bottom: 5vw
+        &--big-vertically
+            height: 40.36vw
+            margin: 5vw 0
+
+.featured
+    +respond(tablet)
+        margin-bottom: 3rem
+    &__title
+        letter-spacing: -0.72px
+        +semiBold
+        font-size: 1.8rem
+        color: $blue-gray
+        margin-bottom: 3rem
+    &__menu
+        & > *:not(last-child)
+            margin-bottom: 2.5rem
+    &__link
+        letter-spacing: -0.8px
+        font-size: 1.6rem
+        color: #72787a
+        &:hover
+            color: $violet-lighter
+    &__button
+        padding: 2.2rem 4.5rem
+            
+.branding
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 5.2vw
+    +respond(tablet)
+        flex-direction: column
+        align-items: flex-start
+    &-article
+        flex: 1 1 850px
+        margin-right: 18.1rem
+        +respond(tablet)
+            flex: 1 1 auto
+            margin-right: 0
+            margin-bottom: 3rem
+        &__title
+            margin-bottom: 3rem
+    &-menu
+        flex: 1 0 159px
+        +respond(tablet)
+            flex: 1 0 auto
+        & > *:not(:last-child)
+            margin-bottom: 2.2rem
+        &__link
+            letter-spacing: 1.4px
+            font-size: 1.4rem
+            color: #818586
+            text-transform: uppercase
+            &:hover
+                color: #2a2d2e
+
+.dummy-slider-wrapper
+    margin-bottom: 7.8vw

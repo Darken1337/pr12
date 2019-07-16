@@ -3,7 +3,7 @@ extends ../layout/main.pug
 block variables
   -var title = 'About'
   -var fileName = 'about'
-  -var build = false
+  -var build = true
   -var navTopColor = 'white'
   -var logoTop = 'logo'
   -var buyBlock = {bgColor: 'blackBlue', buttonColor: 'gray', buttonText: 'buy cesis'}
@@ -13,7 +13,7 @@ block content
   include ../modules/greet-page
   include ../modules/testimonials
 
-
+  include ../modules/navigation-top
   +greet-page('Hello!',
   'I am Tranmautritam',
   'view portfolio', 'white')
@@ -115,7 +115,6 @@ block content
         i.fab.fa-google-plus-g
       .socials__item
         i.fab.fa-wordpress
-  section#s-buy
-    include ../blocks/buy
+  include ../blocks/buy
   include ../blocks/_footer   
   //- script(src="static/libs/libs.min.js")

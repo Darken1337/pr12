@@ -50,7 +50,7 @@
     max-width: 440px
     line-height: 1.7
   &-form
-    flex: 0 1 480px
+    width: 480px
     font-size: 1rem 
     &__button
       margin-top: 5rem
@@ -75,7 +75,7 @@
       flex: 0 1 350px
       font-size: 1.1rem
     &-form
-      flex: 0 1 400px
+      width: 400px
       font-size: 1.1rem
 
 +respond(tablet)
@@ -88,6 +88,39 @@
       width: 70%
       margin: 0 auto
       font-size: 1.3rem
+
+//Contacts
+
+.contacts
+  display: flex
+  padding-top: 5.2vw
+  padding-bottom: 7.8vw
+  justify-content: center
+
+.contact
+  flex: 0 0 290 px
+  &:not(:last-child)
+    margin-right: 120px
+  &__name
+    font-size: 3.2rem
+    color: $blue-gray
+    margin-bottom: 3.5rem
+    +medium
+    letter-spacing: -1.5px
+    line-height: .8
+  &__list
+    font-size: 1.5rem
+    color: $gray-1
+    line-height: .8
+  &__item
+    &:not(:last-child)
+      margin-bottom: 2rem
+
++respond(tablet)
+  .contact
+    text-align: center
+    &:not(:last-child)
+      margin-right: 0
 
 //Socials section
 .socials

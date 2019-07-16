@@ -1,4 +1,4 @@
-- var activePage = {home: false,about: false, contact: true, getStarted: false, portfolio: false}
+- var activePage = {home: false,about: false, contact: false, getStarted: false, portfolio: false, blog: false, singleBlog: false, services: false, singlePortfolio: true}
 
 
 if activePage.about
@@ -15,3 +15,15 @@ if activePage.getStarted
 
 if activePage.portfolio
   include pages/portfolio
+
+if activePage.blog
+  include pages/blog
+
+if activePage.singleBlog
+  include pages/single-blog
+
+if activePage.services
+  include pages/services
+
+if activePage.singlePortfolio
+  include pages/single-portfolio

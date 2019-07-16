@@ -82,7 +82,7 @@
 
 .cesis-btn
   padding: 2.7rem 3.5rem
-  width: 19rem
+  min-width: 19rem
   text-align: center
   border-radius: 25px
   font-size: 1.2rem
@@ -145,32 +145,3 @@
 .select
   display: none
 
-.contacts
-  display: flex
-  padding-top: 5.2vw
-  padding-bottom: 7.8vw
-
-.contact
-  flex: 0 0 290 px
-  &:not(:last-child)
-    margin-right: 120px
-  &__name
-    font-size: 3.2rem
-    color: $blue-gray
-    margin-bottom: 3.5rem
-    +medium
-    letter-spacing: -1.5px
-    line-height: .8
-  &__list
-    font-size: 1.5rem
-    color: $gray-1
-    line-height: .8
-  &__item
-    &:not(:last-child)
-      margin-bottom: 2rem
-
-+respond(tablet)
-  .contact
-    text-align: center
-    &:not(:last-child)
-      margin-right: 0

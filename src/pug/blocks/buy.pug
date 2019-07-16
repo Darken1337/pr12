@@ -1,7 +1,8 @@
-section#s-buy
-  .buyblock-wrapper(class=buyBlock.bgColor == 'blackBlue' ? 'buyblock-wrapper--blue' : buyBlock.bgColor == 'violet' ? 'buyblock-wrapper--violet' : null)
-    .container
-      .buyblock
-        h3.title-tertiary.buyblock__title Let’s make your website great again
-        .buyblock__text Creating a website has never been this easy with Cesis Theme
-        button.buyblock__button(class=buyBlock.buttonColor == 'white' ? 'buyblock__button--white' : buyBlock.buttonColor == 'gray' ? 'buyblock__button--gray' : null)= buyBlock.buttonText
+.buyblock-wrapper(class=buyBlock.bgColor == 'blackBlue' ? 'buyblock-wrapper--blue' : buyBlock.bgColor == 'violet' ? 'buyblock-wrapper--violet' : null)
+  .container
+    .buyblock
+      if(buyBlock.suptitle)
+        .buyblock__suptitle you may also like
+      h3.title-tertiary.buyblock__title Let’s make your website great again
+      .buyblock__text Creating a website has never been this easy with Cesis Theme
+      button.buyblock__button(class=buyBlock.buttonColor == 'white' ? 'buyblock__button--white' : buyBlock.buttonColor == 'gray' ? 'buyblock__button--gray' : null)= buyBlock.buttonText

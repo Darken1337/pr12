@@ -26,7 +26,7 @@ $.gulp.task('dev', $.gulp.series(
 $.gulp.task('build',
   $.gulp.series(
     'clean',
-    $.gulp.parallel('pug:build', 'styles:build', 'styles:libs', 'scripts:build', 'img:dev', 'fonts', 'scripts-lib', 'styles:base')
+    $.gulp.parallel('pug:build', 'styles:build', 'styles:libs', 'scripts:build', 'img:dev', 'fonts', 'scripts-lib', 'styles:base', 'scripts:modules')
   )
 );
 

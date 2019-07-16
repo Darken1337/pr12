@@ -16,7 +16,7 @@ module.exports = function () {
     return $.gulp.src('src/pug/pages/*.pug')
       .pipe($.plag.plumber())
       .pipe($.plag.pug({
-        pretty: false
+        pretty: true
       }))
       .pipe($.plag.plumber.stop())
       .pipe($.gulp.dest('build'))

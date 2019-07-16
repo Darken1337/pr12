@@ -1,0 +1,114 @@
+extends ../layout/main
+
+block variables
+  -var title = 'Single portfolio'
+  -var fileName = 'single-portfolio'
+  -var build = true
+  -var navTopColor = 'white'
+  -var logoTop = 'logo'
+  -var buyBlock = {bgColor: 'violet', buttonColor: 'white', buttonText: 'get in touch', suptitle: false}
+  -var socialItems = {color: 'gray', text: ['Twitter', 'Instagram', 'Dribble']}
+
+
+block content
+  include ../modules/greet-page
+
+  include ../modules/navigation-top
+  section#s-banner
+    .banner-wrapper
+      .container
+        .banner
+          .banner__content
+            h2.banner__title Hels<span>inki</span>
+            .banner__subtitle shoestore
+          button.banner__move-down#buttonMoveDown: img(src="" alt="arrow down" data="static/img/icons/arrow.png")
+  section#s-overview
+    .container
+      .overview-intro
+        h3.overview-intro__title Helsinki Shoestore
+        ul.overview-intro__menu
+          li.overview-intro__item 
+            a.overview-intro__link Branding Design
+          li.overview-intro__item
+            a.overview-intro__link Web Design
+          li.overview-intro__item
+            a.overview-intro__link Photography
+      .overview
+        .container.container--small
+          .overview-articles
+            .overview-article
+              h4.overview-article__title The Challenge.
+              p.overview-article__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .overview-article
+              h4.overview-article__title Our Approach.
+              p.overview-article__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .container.container--big
+          .overview__image: img(src="", alt="", data="static/img/dummy-3.png")
+        .container.container--small
+          .overview-quote Cesis is The New Ultimate Multi-Purpose PSD Template of 2016. Cesis is very Clear, Super Flexible and full of Powerful Options. A lot of Incredible Ideas are included on Cesis. It is arranged by the innovative, sensible and smart way. Cesis is built by strong concerns for the User Experience and the meticulous for the User Interface.
+          .process
+            h4.process__title Process.
+            .process-step
+              .process-step__number 01.
+              .process-step__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .process-step
+              .process-step__number 02.
+              .process-step__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .process-step
+              .process-step__number 03.
+              .process-step__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .process-step
+              .process-step__number 04.
+              .process-step__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .container.container--big
+          .overview-gallery
+            .overview-gallery__item.overview-gallery__item--half-width
+            .overview-gallery__item.overview-gallery__item--half-width
+            .overview-gallery__item.overview-gallery__item--full-width: img(src="", alt="", data="static/img/dummy-4.png")
+  section#s-quote-slider    
+    .quotes-slider-wrapper
+      .container
+        .quotes-slider.js-quotes-slider
+          .quotes-slider__item
+            p.quotes-slider__text “ Tranmautritam is super helpful after purchase and helped me locate some images and mock-ups i was unable to find. This theme is super clean, minimal and corporate. Well layered and very useful for that style of design. Totally recommend due to item quality and customer service. ”
+            .quotes-slider__author bradley lancaster
+            .quotes-slider__organization Helsinki Shoestore
+  section#s-gallery
+    .container.container--big
+      .gallery
+        .gallery__item.gallery__item--full-height
+        .gallery__item.gallery__item--full-height
+          .gallery__item.gallery__item--half-height(style="background-image: url(static/img/dummy-5.png) ")
+          .gallery__item.gallery__item--half-height(style="background-image: url(static/img/dummy-6.png)")
+  section#s-share
+    include ../blocks/share
+  section#s-lets-make
+    .container.container--big
+      .lets-make
+        .lets-make__logo: img(src="", alt="", data= "static/img/logo-big.png")
+        .lets-make__content
+          h3.lets-make__title Let’s make something great together
+          .lets-make__subtitle I build identities and experiences to elevate & empower organizations.
+  section#s-works-prev
+    .container.container--big
+      .works-prev-wrapper
+        .works-prev
+          .work-prev-column
+            .work-prev.work-prev--big
+              .work-prev__category Photography
+              h4.work-prev__title Canon Microless Pack
+          .work-prev-column
+            .work-prev.work-prev--small-horizontally
+              .work-prev__category Branding
+              h4.work-prev__title North Oxford Logo Design
+            .work-prev.work-prev--small-horizontally
+              .work-prev__category Applications
+              h4.work-prev__title Apple Watch Applications
+        button.button-black-border view all
+  section#s-buyblock
+    include ../blocks/buy
+  include ../blocks/_footer
+
+
+
+          

@@ -1,0 +1,330 @@
+@import '../variables'
+@import '../mixins.scss'
+
+@import '../modules/greet-page'
+@import '../modules/share'
+@import '../modules/buy'
+@import '../modules/footer'
+
+
+//Bnner section
+
+.banner
+    font-size: 1rem
+    +respond(tablet)
+        font-size: .8rem
+    &-wrapper
+        padding: 19.58vw 0 5rem 0
+        background-color: $blue-moderate
+        +respond(phone)
+            padding-top: 100px
+    &__content
+        margin: 0 auto
+        max-width: 48.8em
+        color: $white 
+        text-align: center
+        margin-bottom: 16.15vw
+    &__title
+        font-size: 20em
+        word-break: break-all
+        text-transform: uppercase
+        line-height: .9
+        +semiBold
+        span
+            letter-spacing: 1.8rem
+            text-align: right
+    &__subtitle
+        font-size: 4.5em
+        text-transform: uppercase
+        letter-spacing: 2rem
+        +semiBold
+    &__move-down
+        display: block
+        margin: 0 auto
+
+// Overview intro section
+
+.overview
+    &-intro
+        padding-top: 7.81vw
+        padding-bottom: 3.39vw
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        font-size: 1rem
+        +respond(tablet)
+            font-size: .8rem
+        +respond(phone)
+            font-size: .7rem
+        &::after
+            content: ''
+            position: absolute
+            background-color: $violet-lighter
+            width: 170px
+            height: 5px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+        &__title
+            letter-spacing: -4px
+            font-size: 8em 
+            color: $blue-gray
+            margin-bottom: 2.8rem
+            text-align: center
+            line-height: 1
+            +respond(tablet)
+                letter-spacing: 0px
+        &__menu
+            display: flex
+            & > *:not(:last-child)
+                margin-right: 3.3rem
+                position: relative
+                &::after
+                    content: '.'
+                    position: absolute
+                    bottom: -2px
+                    right: -15px
+                    color: $blue-gray
+                    font-size: 2rem
+        &__link
+            color: $blue-gray
+            font-size: 1.8rem
+            +thin
+
+// Overciew section
+
+.overview
+    padding: 5.21vw 0 7.81vw
+    &-articles
+        display: flex  
+        margin-bottom: 5.21vw
+        flex-wrap: wrap
+    &-article
+        width: calc(100%/2 - 4.8rem)
+        text-align: left
+        +respond(phone)
+            width: 100%
+        &:not(:last-child)
+            margin-right: 4.8rem
+            +respond(phone)
+                margin-right: 0
+                margin-bottom: 3rem
+        &__title
+            margin-bottom: 3rem
+            color: $blue-gray
+            font-size: 3rem
+        &__text
+            color: $gray-light
+            font-size: 1.4rem
+    &__image
+        max-width: 1440px
+        margin: 0 auto
+        max-height: 554px
+    &-quote
+        font-family: 'PlayFair'
+        font-size: 3rem
+        line-height: 1.6
+        color:  $blue-gray
+        opacity: .7
+        margin: 4.95vw 0
+
+.process
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 4.95vw
+    & > *:not(:last-child)
+        margin-right: 4.8rem
+        +respond(phone)
+            margin-right: 0
+    &__title
+        width: 100%
+        letter-spacing: -1.5px
+        font-size: 3rem
+        color: $blue-gray
+    &-step
+        width: calc(100%/2 - 4.8rem)
+        margin-top: 5rem
+        +respond(phone)
+            width: 100%
+        &__number
+            color: $violet-lighter
+            font-size: 3rem
+            margin-bottom: 4rem 
+        &__desc
+            color: $gray-light
+            font-size: 1.4rem
+            line-height: 1.7
+            +respond(tablet)
+                font-size: 1.8rem
+
+.overview
+    &-gallery
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: -3rem
+        &__item
+            &--half-width
+                margin-bottom: 3rem
+                width: calc(100%/2 - 1.5rem)
+                height: 40.88vw
+                overflow: hidden
+                +respond(phone)
+                    width: 100%
+                &:nth-child(odd)
+                    margin-right: 3rem
+                    +respond(phone)
+                        margin-right: 0
+            &--full-width
+                width: 100%
+
+.quotes-slider
+    color: $white
+    text-align: center
+    &-wrapper
+        background-color: #1a1a1d
+        opacity: .9
+        padding: 13.02vw 0
+    &__text
+        line-height: 1.4
+        font-family: 'PlayFair'
+        font-size: 4rem
+        opacity: .7
+        margin-bottom: 6.4rem
+    &__author
+        letter-spacing: 1.6px
+        font-size: 1.8rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        +semiBold
+    &__organization
+        text-transform: uppercase
+        font-size: 1.4rem
+        +semiBold
+        letter-spacing: 1.2px
+
+.gallery
+    margin: 7.81vw 0
+    display: flex
+    flex-wrap: wrap
+    &__item
+        $item-height: 40.88vw
+        +respond(phone)
+            $item-height: 40rem
+            width: 100%
+        &--full-height
+            width: calc(100%/2 - 1.5rem)
+            height: calc(#{$item-height} * 2 + 3rem)
+            +respond(phone)
+                width: 100%
+                &:nth-child(1)
+                    height: $item-height
+            &:first-child
+                margin-right: 3rem
+                background-color: $violet-lighter
+                +respond(phone)
+                    margin-right: 0
+                    margin-bottom: 3rem
+        &--half-height
+            height: $item-height
+            width: 100%
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: bottom center
+            img
+                width: auto
+                height: 100%
+            &:last-child
+                margin-top: 3rem
+
+.lets-make
+    display: flex
+    justify-content: space-between
+    padding-left: 13.75vw
+    margin-bottom: 5.2vw
+    +respond(laptop)
+        padding-left: 0
+    &__logo
+        width: 278px
+        height: 278px
+        align-self: center  
+        +respond(tablet)
+            display: none
+    &__content
+        max-width: 70rem
+    &__title
+        letter-spacing: -4px
+        color: $blue-gray
+        font-size: 8rem
+        line-height: 1.25
+        +semiBold
+        text-align: right     
+        padding-right: 7rem
+        position: relative
+        margin-bottom: 3.7rem
+        +respond(phone)
+            font-size: 5rem
+            letter-spacing: 0
+        &::after
+            content: ''
+            height: 100%
+            width: 1rem
+            position: absolute
+            background-color: $violet-lighter
+            right: 0
+            top: 0
+    &__subtitle
+        font-size: 1.8rem
+        color: $blue-gray 
+        text-align: right
+            
+.works-prev
+    display: flex
+    margin-bottom: 3.65vw 
+    +respond(tablet)
+        flex-direction: column
+    &-wrapper
+        margin-bottom: 7.81vw
+        button
+            display: block
+            margin: 0 auto
+
+.work-prev
+    $margin: 2.4rem
+    $column-height: 41.56vw
+    width: 100%
+    background-color: $violet-lighter
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-start
+    padding: 5rem
+    color: $white
+    &-column
+        width: calc(100%/2 - #{$margin}/2)
+        heigth: $column-height
+        +respond(tablet)
+            width: 100%
+        &:not(:last-child)
+            margin-right: $margin
+            +respond(tablet)
+                margin-right: 0
+                margin-bottom: $margin
+    &--small-horizontally
+        height: calc(#{$column-height}/2 - #{$margin}/2)
+        +respond(tablet)
+            height: $column-height
+        &:not(:last-child)
+            margin-bottom: $margin
+    &--big
+        height: $column-height
+    &__category
+        font-size: 1.8rem
+        margin-bottom: .5rem
+    &__title
+        +semiBold
+        font-size: 2.4rem
+
+        
+
+

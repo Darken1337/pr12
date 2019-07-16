@@ -2,15 +2,37 @@
 
 .buyblock
   text-align: center
+  position: relative
   &-wrapper
-    padding: 11.52vw 0 
-    &--blue
-      background-color: $blue-dark
+    padding: 11.52vw 0
+    position: relative
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: center center
+    z-index: 1
+    & > .container
+      position: relative
+      z-index: 10
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 5
+      background-color: rgba(#2eb82e, .7)
     &--violet
       background-color: $violet-lighter
   &__title
     max-width: 757px
     margin: 0 auto
+  &__suptitle
+    letter-spacing: 1.2px
+    font-size: 1.2rem
+    color: $white
+    text-align: center
+    text-transform: uppercase
   &__text
     font-size: 1.8rem
     color: $white
@@ -27,8 +49,10 @@
       &:hover
         background-color: $white
         color: $violet-lighter
-    &--gray
-      border: 1px solid $gray-main
+    &--green
+      border: 1px solid #1e7b1e
       &:hover
-        background-color: $gray-main
-        color: $blue-dark
+        background-color: #2eb82e
+        color: #1e7b1e
+        transform: scale(1.1)
+
