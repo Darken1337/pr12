@@ -27,11 +27,16 @@
 .blog
   display: flex
   justify-content: center
+  margin-bottom: 9.38vw !important
   &-slide
     width: 79.8rem
     height: 79.8rem
     margin-right: 24px
   &-dots
+    position: absolute
+    bottom: -4.69vw
+    left: 50%
+    transform: translateX(-50%)
     & > .slick-dots
       padding: 30px 0
       display: flex
@@ -46,6 +51,10 @@
           background-color: $violet-lighter
         &:not(:last-child)
           margin-right: 10px
+  
+#s-blog
+  & > .container
+    position: relative
 
 .article
   width: 100%

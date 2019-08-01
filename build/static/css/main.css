@@ -27,37 +27,10 @@
   font-style: normal; }
 
 @font-face {
-  font-family: "Font Awesome 5 Brands";
-  src: url("../fonts/fa-brands-400.eot");
-  src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-brands-400.woff") format("woff"), url("../fonts/fa-brands-400.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: "PlayFair";
   src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("otf");
   font-weight: normal;
   font-style: normal; }
-
-@font-face {
-  font-family: "Font Awesome 5 Regular";
-  src: url("../fonts/fa-regular-400.eot");
-  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fontsfa-regular-400.woff") format("woff"), url("../fontsfa-regular-400.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Font Awesome 5 solid";
-  src: url("../fonts/fa-solid-900.eot");
-  src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.fas {
-  font-family: 'Font Awesome 5 solid' !important; }
-
-.far {
-  font-family: 'Font Awesome 5 Regular' !important; }
 
 html {
   scroll-behavior: smooth;

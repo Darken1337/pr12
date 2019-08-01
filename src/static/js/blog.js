@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
         
     }
 
-    window.addEventListener('resize', insightsSlider )
+    window.addEventListener('resize', insightsSliderInit )
 
     blogSliderInit();
     insightsSliderInit();
